@@ -1,0 +1,100 @@
+* {
+    font-family: 'Zen Loop', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/female_hands_typing.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+}
+
+.invite {
+    box-sizing: border-box;   /* WHAT DOES THIS ONE ACTUALLY DO? GOOGLE. IF I TAKE IT AWAY BOX IS STILL THERE */
+    max-width: 800px;
+	width: 100%;
+	min-height: 300px; 
+    background-color: #e69138;
+    opacity: 0.7;
+    border-style: double;
+    border-radius: 30px;
+    box-shadow: -5px 5px 20px gray; 
+
+    margin: 30px;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+    animation-name: change;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change {
+    from {background-color: #e69138;}
+    to {background-color: lightseagreen;}
+}
+
+h1 { 
+    font-size: 50px;
+}
+
+.btn {
+    width: 300px;
+    height: 60px;
+    border-radius: 25px;
+    border-style: none;
+    box-shadow: 1px 1px 15px aquamarine;
+
+    font-size: 30px;     /* DOES THIS TAKE EFFECT SINCE I HAVE THE UNIVERSAL SELECTOR SET AT 40PX? I THINK IT DOES, IT SHOULD OVERWRITE THE UNI SEL */
+    font-weight: bolder;
+    letter-spacing: 4px;
+
+    position: absolute;
+    top: 75%;
+    left: 50%;
+                                /* SOME TROUBLE POSITIONING THE BTN & IMG -COULD I GET SOME FEEDBACK ON THAT? 
+                                    WHY DO I NEED CLASSES FOR BTN & IMG IN THE 1ST PLACE? */
+}                                           
+
+.btn:hover {
+    background-color: brown;
+    width: 350px;
+    height: 100px;
+    transition: all 3s ease-out 1s;  
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+    position: absolute;
+    left: 8%;
+    bottom: 8%;
+
+    animation-name: hands;
+    animation-duration: 8s;
+    animation-delay: 3s;
+    animation-iteration-count: 5;
+}
+
+@keyframes hands {
+    0% {transform: scale(1) rotate(0deg);}
+    25% {transform: scale(1.4) rotate(30deg);}
+    50% {transform: scale(1.2) rotate(-15deg);}
+    100% {transform: scale(1) rotate(0deg);}
+}
+
